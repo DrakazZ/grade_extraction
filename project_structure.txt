@@ -1,0 +1,29 @@
+grade_extraction/
+│
+├── requirements.txt                 # Dependencies
+├── config.json                      # Configuration file
+├── README.md                        # Documentation
+│
+├── main.py                          # Entry point - Launch UI
+│
+├── core/
+│   ├── __init__.py
+│   ├── geometry.py                  # Table detection & grid building
+│   ├── ocr.py                       # OCR handlers (Tesseract, TrOCR)
+│   ├── metadata_extractor.py       # Extract groupe/matiere from top
+│   ├── grade_parser.py              # Parse & validate grades
+│   └── excel_exporter.py            # Excel generation
+│
+├── models/
+│   ├── __init__.py
+│   ├── data_models.py               # GradeValue, StudentRow, TableStructure
+│   └── config_model.py              # Configuration data class
+│
+├── ui/
+│   ├── __init__.py
+│   ├── main_window.py               # PyQt5 main window
+│
+├── utils/
+│   ├── __init__.py
+│   ├── image_utils.py               # Image preprocessing helpers
+│   └── logger.py                    # Logging utilities

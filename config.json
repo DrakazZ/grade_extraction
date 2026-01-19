@@ -1,0 +1,43 @@
+{
+  "ocr": {
+    "tesseract_lang": "fra",
+    "trocr_model": "microsoft/trocr-base-handwritten",
+    "dpi": 300,
+      "cell_margin_x": 0,
+  "cell_margin_y": 0
+  },
+  "geometry": {
+    "line_merge_threshold": 20,
+    "min_line_length": 100,
+    "edge_margin": 100,
+    "min_cell_width": 50,
+    "min_cell_height": 40,
+    "header_height_ratio": 0.2
+  },
+  "grades": {
+    "min_value": 0,
+    "max_value": 20,
+    "absent_keywords": ["A", "ABS", "ABSENT"],
+    "absent_policy": "KEEP"
+  },
+  "templates": {
+    "70": {
+      "columns": 7,
+      "drop_indices": [0, 4, 5],
+      "grade_columns": [6],
+      "excel_headers": ["CIN", "Nom & Prenom FR", "70%"]
+    },
+    "30": {
+      "columns": 5,
+      "drop_indices": [0],
+      "grade_columns": [3, 4],
+      "excel_headers": ["CIN", "Nom & Prenom FR", "20%", "10%"]
+    },
+    "40_40_20": {
+      "columns": 6,
+      "drop_indices": [0],
+      "grade_columns": [3, 4, 5],
+      "excel_headers": ["CIN", "Nom & Prenom FR", "40%", "40%", "20%"]
+    }
+  }
+}
